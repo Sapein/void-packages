@@ -46,7 +46,8 @@ do_configure() {
 		--with-ex-name=vim-ex --with-view-name=vim-view"
 
 	nohuge_args="--disable-perlinterp --disable-pythoninterp
-		--disable-rubyinterp --disable-netbeans --disable-gpm"
+		--disable-rubyinterp --disable-netbeans --disable-gpm
+		--with-python3-stable-abi=3.12 --enable-python3interp"
 
 	if [ "$CROSS_BUILD" ]; then
 		configure_args+="
