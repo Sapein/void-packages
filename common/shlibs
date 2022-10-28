@@ -4590,3 +4590,4 @@ libcpptrace.so.1 cpptrace-1.0.4_1
 libmimalloc.so.2 mimalloc-2.0.6_1
 libcpp-hocon.so.0.3.0 cpp-hocon-0.3.0_5
 libfst.so.25 openfst-1.8.2_1
+libvosk.so vosk-api-0.3.43_1
