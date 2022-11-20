@@ -4538,3 +4538,5 @@ libsfdo-desktop.so.0 libsfdo-0.1.3_1
 libsfdo-desktop-file.so.0 libsfdo-0.1.3_1
 libsfdo-icon.so.0 libsfdo-0.1.3_1
 libKMahjongg6.so.6 libkmahjongg-24.08.2_1
+libmimalloc.so.2 mimalloc-2.0.6_1
+libcpp-hocon.so.0.3.0 cpp-hocon-0.3.0_5
