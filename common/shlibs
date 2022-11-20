@@ -4587,3 +4587,5 @@ libgpiodcxx.so.2 libgpiod-2.2_4
 libigloo.so.0 libigloo-0.9.5_1
 libfyaml.so.0 libfyaml-0.9.6_1
 libcpptrace.so.1 cpptrace-1.0.4_1
+libmimalloc.so.2 mimalloc-2.0.6_1
+libcpp-hocon.so.0.3.0 cpp-hocon-0.3.0_5
