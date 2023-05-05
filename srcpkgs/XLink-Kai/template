@@ -1,0 +1,53 @@
+# Template file for 'XLink-Kai'
+pkgname=XLink-Kai
+version=7.4.44
+revision=1
+archs="i686 x86_64"
+build_style=fetch
+hostmakedepends="curl tar"
+short_desc="VPN Tunnler to allow old consoles and games to play online"
+maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
+license="custom:Proprietary"
+homepage="https://www.teamxlink.co.uk/"
+_additional="632903458"
+restricted=yes
+repository=nonfree
+
+pre_fetch() {
+	case "${XBPS_TARGET_MACHINE}" in
+		'x86_64')
+			target="amd64"
+			arch="x86_64"
+			export checksum="8a18caeed60d574087838d4f035b4d960bce0361e5111e0fa845118cfa1b9c43"
+			;;
+		'i686')
+			target="i386"
+			arch="x86"
+			export checksum="553b15ac063d932b27c66c0acf5e60aef7ba8a328365148ade534f3edc473dd7"
+			;;
+	esac
+	export distfiles="https://dist.teamxlink.co.uk/linux/debian/static/standalone/release/${target}/xlinkkai_${version}_${_additional}_standalone_${arch}.tar.gz"
+}
+
+do_fetch() {
+	curl $distfiles -o xlinkkai.tar.gz
+	curr_sum=$(cat xlinkkai.tar.gz | sha256sum | sed -e 's/-//')
+	test $curr_sum == $checksum
+}
+
+do_extract() {
+	mv ../xlinkkai.tar.gz ./
+	tar xvf xlinkkai.tar.gz
+}
+
+do_install() {
+	cd "kaiEngine-standalone"
+	vbin kaiengine
+	vsv xlink-kai
+}
+
+post_install() {
+	echo "The current Terms and License can be found at: https://www.teamxlink.co.uk/disclaimer" > LICENSE
+	vlicense LICENSE
+}
+
