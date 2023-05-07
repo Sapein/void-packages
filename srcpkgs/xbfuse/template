@@ -1,0 +1,31 @@
+# Template file for 'xbfuse'
+pkgname=xbfuse
+version=1.0
+revision=1
+archs="x86_64"
+build_style=gnu-configure
+hostmakedepends="git automake vim"
+makedepends="fuse-devel"
+depends="fuse"
+short_desc="FUSE Program to properly mount xbox isos and discs"
+maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
+license="GPL-2.0-only"
+homepage="https://github.com/multimediamike/xbfuse"
+_upstream="https://github.com/multimediamike/xbfuse.git"
+
+do_extract() {
+	git clone "${_upstream}" "./"
+}
+
+pre_configure() {
+	./autogen.sh
+}
+
+do_build() {
+	cd src
+	cc -D_FILE_OFFSET_BITS=64 -Wall main.c tree.c xdvdfs.c -o xbfuse -lfuse
+}
+
+do_install() {
+	vbin src/xbfuse
+}
