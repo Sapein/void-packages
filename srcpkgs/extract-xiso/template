@@ -1,0 +1,18 @@
+# Template file for 'extract-xiso'
+pkgname=extract-xiso
+version=202303040307
+revision=1
+archs="i686 x86_64"
+build_style=cmake
+configure_args='-DCMAKE_C_FLAGS="-m32"'
+makedepends="gcc-multilib"
+short_desc="Extract xiso files from regular xbox discs"
+maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
+license="BSD-4-Clause"
+homepage="https://github.com/XboxDev/extract-xiso"
+distfiles="https://github.com/XboxDev/extract-xiso/archive/refs/tags/build-${version}.tar.gz"
+checksum=6b40a0114fb9f79d9e75a4d6c80efce68e2cb0da3e93fe575ea2c7e30aa5ed57
+
+post_install() {
+	vlicense LICENSE.TXT LICENSE
+}
