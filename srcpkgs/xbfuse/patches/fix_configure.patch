@@ -1,0 +1,13 @@
+--- master/configure.ac 2012-03-21 12:16:41.843369416 +0000
++++ master-build/configure.ac   2012-03-21 12:48:25.446611065 +0000
+@@ -5,10 +5,9 @@
+ AC_PROG_CC
+ #AC_PROG_LIBTOOL
+
+-CPPFLAGS="$CPPFLAGS -Wall `getconf LFS_CFLAGS`"
++CPPFLAGS="$CPPFLAGS -Wall  -D_FILE_OFFSET_BITS=64 `getconf LFS_CFLAGS`"
+ LDFLAGS="$LDFLAGS `getconf LFS_LDFLAGS`"
+
+-PKG_CHECK_MODULES([FUSE], [fuse >= 2.5])
+
+ AC_HEADER_STDC
