@@ -1,6 +1,6 @@
 # Template file for 'XLink-Kai'
 pkgname=XLink-Kai
-version=7.4.44
+version=7.4.45
 revision=1
 archs="i686 x86_64"
 build_style=fetch
@@ -9,7 +9,7 @@ short_desc="VPN Tunnler to allow old consoles and games to play online"
 maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
 license="custom:Proprietary"
 homepage="https://www.teamxlink.co.uk/"
-_additional="632903458"
+_additional="651430714"
 restricted=yes
 repository=nonfree
 
@@ -18,12 +18,12 @@ pre_fetch() {
 		'x86_64')
 			target="amd64"
 			arch="x86_64"
-			export checksum="8a18caeed60d574087838d4f035b4d960bce0361e5111e0fa845118cfa1b9c43"
+			export checksum="dd7eae6f5b0e8f3482150560cbef057af891510a5c8777cd7cce710df84e5fe4"
 			;;
 		'i686')
 			target="i386"
 			arch="x86"
-			export checksum="553b15ac063d932b27c66c0acf5e60aef7ba8a328365148ade534f3edc473dd7"
+			export checksum="ae4882b1110f7d96ee951fc0e482b0f0fc71087200a3f291a11a24236008c05d"
 			;;
 	esac
 	export distfiles="https://dist.teamxlink.co.uk/linux/debian/static/standalone/release/${target}/xlinkkai_${version}_${_additional}_standalone_${arch}.tar.gz"
