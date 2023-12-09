@@ -1,6 +1,6 @@
 # Template file for 'xemu'
 pkgname=xemu
-version=0.7.88
+version=0.7.117
 revision=1
 archs="x86_64"
 hostmakedepends="git gettext pkg-config perl python3 python3-Sphinx python3-sphinx_rtd_theme ninja"
