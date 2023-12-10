@@ -1,0 +1,22 @@
+diff --git a/es-core/src/utils/PlatformUtil.cpp b/es-core/src/utils/PlatformUtil.cpp
+index af8dd9e5..94b72132 100644
+--- a/es-core/src/utils/PlatformUtil.cpp
++++ b/es-core/src/utils/PlatformUtil.cpp
+@@ -43,7 +43,7 @@ namespace Utils
+             // This will probably never be used as macOS requires root privileges to reboot.
+             return system("shutdown -r now");
+ #else
+-            return system("shutdown --reboot now");
++            return system("sudo reboot now");
+ #endif
+         }
+ 
+@@ -55,7 +55,7 @@ namespace Utils
+             // This will probably never be used as macOS requires root privileges to power off.
+             return system("shutdown now");
+ #else
+-            return system("shutdown --poweroff now");
++            return system("sudo shutdown -hP now");
+ #endif
+         }
+ 
