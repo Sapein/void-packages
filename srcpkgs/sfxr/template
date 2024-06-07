@@ -1,0 +1,23 @@
+# Template file for 'sfxr'
+pkgname=sfxr
+version=1.2.1
+revision=1
+archs="i686 x86_64"
+build_style=gnu-makefile
+hostmakedepends="pkg-config desktop-file-utils"
+makedepends="SDL-devel gtk+3-devel"
+depends="SDL gtk+3"
+short_desc="Random sound effect generator for games, etc"
+maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
+license="MIT"
+homepage="https://www.drpetter.se/project_sfxr.html"
+distfiles="https://www.drpetter.se/files/sfxr-sdl-1.2.1.tar.gz"
+checksum=ca93be8964c92fe3a2c945640cd3e93c95ae7abe24290818f4fe7f6e5a7cd835
+
+post_extract() {
+	grep -A 21 "Copyright" readme.txt > LICENSE
+}
+
+post_install() {
+	vlicense LICENSE
+}
