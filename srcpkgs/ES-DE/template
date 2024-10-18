@@ -1,6 +1,6 @@
 # Template file for 'EmulationStation-DE'
 pkgname=ES-DE
-version=3.0.3
+version=3.1.0
 revision=1
 build_style=cmake
 configure_args="-DAPPLICATION_UPDATER=off"
@@ -12,7 +12,7 @@ maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
 license="MIT"
 homepage="https://es-de.org/"
 distfiles="https://gitlab.com/es-de/emulationstation-de/-/archive/v${version}/emulationstation-de-v${version}.tar.gz"
-checksum=cbb94898b61293480aef197363d3272b6b3c3d0833bc18c185e9cc9978d677fc
+checksum=ce47f35fe351ebe7375cb033d4e45090b4670e7b510eaecb51df709b4c21d4cf
 
 post_install() {
 	vlicense LICENSE
@@ -23,9 +23,3 @@ EmulationStation-DE_package() {
     depends="${sourcepkg}"
     short_desc += " - transitional dummy package"
 }
-
-#EmulationStation-DE_package() {
-#	pkg_install() {
-#		#vmove path
-#	}
-#}
