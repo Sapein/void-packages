@@ -1,16 +1,16 @@
 # Template file for 'xemu'
 pkgname=xemu
-version=0.7.118
+version=0.7.132
 revision=1
 archs="x86_64"
 hostmakedepends="git gettext pkg-config perl python3 python3-Sphinx python3-sphinx_rtd_theme ninja"
-makedepends="SDL2-devel libepoxy-devel pixman-devel gtk+3-devel openssl-devel libsamplerate-devel libpcap-devel python3-yaml"
+makedepends="SDL2-devel libepoxy-devel pixman-devel gtk+3-devel openssl-devel libsamplerate-devel libpcap-devel python3-yaml libslirp-devel"
 short_desc="Original XBOX emulator"
 maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://xemu.app"
 distfiles="https://github.com/xemu-project/xemu/releases/download/v${version}/src.tar.gz"
-checksum=1d62758c47cd1844b7f6bd2d0899ed82137445eff17db7b94f80601757213e66
+checksum=c1f713cca5175693c517b53b6d8bffe882a29c0fd589f15faed92e7a75a0a589
 
 do_build() {
 	./build.sh
