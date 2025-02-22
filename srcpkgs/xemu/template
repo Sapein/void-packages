@@ -1,6 +1,6 @@
 # Template file for 'xemu'
 pkgname=xemu
-version=0.8.16
+version=0.8.20
 revision=1
 archs="x86_64"
 hostmakedepends="git gettext pkg-config perl python3 python3-Sphinx python3-sphinx_rtd_theme ninja cmake"
@@ -10,7 +10,7 @@ maintainer="Sapein <5852983+Sapein@users.noreply.github.com>"
 license="GPL-2.0-or-later, LGPL-2.1-or-later"
 homepage="https://xemu.app"
 distfiles="https://github.com/xemu-project/xemu/releases/download/v${version}/src.tar.gz"
-checksum=7b99e50993c09f836260d33bf6672f01c1b27c081ecadc642cb0075406229edb
+checksum=ca53b5675d9dfbc06def145330be6858a5a95bdd8e6fe21cbc89465f42cd9e24
 
 do_build() {
 	./build.sh
